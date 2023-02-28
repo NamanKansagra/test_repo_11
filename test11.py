@@ -18,7 +18,7 @@ for i, date in enumerate(date_list):
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", "data"])
     subprocess.run(["git", "commit", "--amend", "--date", f"{date:%Y-%m-%d %H:%M:%S}", "--no-edit"])
-    subprocess.run(["git", "push", "origin", "master"])
+    subprocess.run(["git", "push", "origin", "main"])
 
     # Print message to confirm file creation and push to GitHub with the date
     print(f"Created files and pushed to GitHub on {date}")
